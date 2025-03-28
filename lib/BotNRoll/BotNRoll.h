@@ -31,6 +31,8 @@ public:
     uint16_t getLidarFrontDistance();
     uint16_t getLidarLeftDistance();
 
+    void buzzer(uint32_t frequency);
+
     uint16_t getLDRValue();
 };
 
@@ -105,6 +107,13 @@ uint16_t BotNRoll::getLidarFrontDistance() {
 uint16_t BotNRoll::getLidarLeftDistance() {
     uint16_t result = deviceLidarLeft.readRangeContinuousMillimeters();
     return constrain(result, DIST_LIDAR_MIN, DIST_LIDAR_MAX);
+}
+
+/**
+ * @brief Play buzzer at given frequency, in Hz.
+ */
+void BotNRoll::buzzer(uint32_t frequency) {
+    tone(9, frequency, 250);
 }
 
 /**
