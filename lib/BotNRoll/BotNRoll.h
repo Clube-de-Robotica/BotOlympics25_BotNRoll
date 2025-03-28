@@ -5,8 +5,8 @@
 class BotNRoll : public BnrOneA {
 private:
     static constexpr uint16_t PIN_SS_BNRONEA = 2;
-    static constexpr uint16_t PIN_XSHUT_RIGHT = 7;
-    static constexpr uint16_t PIN_XSHUT_FRONT = 6;
+    static constexpr uint16_t PIN_XSHUT_RIGHT = 6;
+    static constexpr uint16_t PIN_XSHUT_FRONT = 7;
     static constexpr uint16_t PIN_XSHUT_LEFT = 5;
 
     static constexpr uint16_t ADDR_LIDAR_RIGHT = 0x70;
